@@ -24,6 +24,9 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
+  <!--ajax-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <!-- =======================================================
     Theme Name: DevFolio
     Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
@@ -498,7 +501,7 @@
                     </h5>
                   </div>
                   <div>
-                      <form action="" method="post" role="form" class="contactForm">
+                      <form action="" id="submit-form">
                       <div id="sendmessage">Your message has been sent. Thank you!</div>
                       <div id="errormessage"></div>
                       <div class="row">
@@ -601,10 +604,27 @@
   <script src="lib/lightbox/js/lightbox.min.js"></script>
   <script src="lib/typed/typed.min.js"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbyBRkPlC8Dg6Dyo8_bG96PW_-DUC2eS5VNaPkugnhuPEA1S64mH6sxxsDep_Kvv98ejgQ/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error:function (err){
+                alert("Something Error")
 
+            }
+        })
+    })
+</script>
 </body>
 </html>
