@@ -1241,6 +1241,7 @@ footer .credits a {
   .box-comments,
   .widget-sidebar {
     padding: 3rem;
+    height: 240em;
   }
 
   .blog-wrapper .article-title {
@@ -1249,6 +1250,38 @@ footer .credits a {
 
   .box-comments .list-comments .comment-author {
     font-size: 1.5rem;
+  }
+  .imgmem{
+    margin-top: 5rem;
+    max-width: 50%;
+    height: auto;
+    float: left;
+  }
+  .movieandname{
+    padding: .18rem;
+    max-width: 18%;
+    min-width: 22%;
+    max-height: 18%;
+    min-height: 18%;
+    margin-top: 3rem;
+    margin-right: 15px;
+    float: left;
+  }
+  .moviediv{
+    margin-top: 2rem;
+    width: 66vw;
+    min-width: 100%;
+    height: 90rem;
+  }
+  .posterimg{
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .imgmemph{
+    margin-top: 25px;
+    max-width: 50%;
+    height: fit-content;
+    float: left;
   }
 }
 
